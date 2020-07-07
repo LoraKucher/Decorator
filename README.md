@@ -1,18 +1,23 @@
-# Decorator
+# Swift Design Patterns
 
-## Applicability
+## What are Design Patterns?
 
-Use the Decorator pattern when you need to be able to assign extra behaviors to objects at runtime without breaking the code that uses these objects.
+Design patterns provide solutions to common software design problems. In the case of object-oriented programming, design patterns are generally aimed at solving the problems of object generation and interaction, rather than the larger scale problems of overall software architecture. They give generalised solutions in the form of templates that may be applied to real-world problems.
 
-The Decorator lets you structure your business logic into layers, create a decorator for each layer and compose objects with various combinations of this logic at runtime. The client code can treat all these objects in the same way, since they all follow a common interface.
+### Why do you need to know the patterns?
 
-Use the pattern when it’s awkward or not possible to extend an object’s behavior using inheritance.
+- The main reason is that patterns simplify the design and support of programs.
 
+- Proven solutions.
 
-### Lifehack
+- When you use ready-made solutions, instead of reinventing the wheel.
 
-Swift as a lot of programming languages has the 'final' keyword that can be used to prevent further extension of a class.
-For a final class, the only way to reuse the existing behavior would be to wrap the class with your own wrapper, using the Decorator pattern.
+- Code standardization.
 
+- You make fewer mistakes, so you find all the hidden problems.
 
-@ https://refactoring.guru/design-patterns/decorator
+- Mutual language.
+
+You pronounce the name of the pattern, instead of explaining it to the other teams.
+
+### P.S. Each branch corresponds to a pattern
