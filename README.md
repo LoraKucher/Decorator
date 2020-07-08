@@ -1,23 +1,20 @@
-# Swift Design Patterns
+# Abstract Factory
 
-## What are Design Patterns?
+### Intent
 
-Design patterns provide solutions to common software design problems. In the case of object-oriented programming, design patterns are generally aimed at solving the problems of object generation and interaction, rather than the larger scale problems of overall software architecture. They give generalised solutions in the form of templates that may be applied to real-world problems.
+Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
 
-### Why do you need to know the patterns?
+### Problem
 
-- The main reason is that patterns simplify the design and support of programs.
+Imagine that you’re creating a furniture shop simulator. Your code consists of classes that represent:
 
-- Proven solutions.
+A family of related products, say: Chair + Sofa + CoffeeTable.
 
-- When you use ready-made solutions, instead of reinventing the wheel.
+Several variants of this family. For example, products Chair + Sofa + CoffeeTable are available in these variants: Modern, Victorian, ArtDeco.
+You need a way to create individual furniture objects so that they match other objects of the same family. Customers get quite mad when they receive non-matching furniture.
 
-- Code standardization.
+Also, you don’t want to change existing code when adding new products or families of products to the program. Furniture vendors update their catalogs very often, and you wouldn’t want to change the core code each time it happens.
 
-- You make fewer mistakes, so you find all the hidden problems.
+### Solution
 
-- Mutual language.
-
-You pronounce the name of the pattern, instead of explaining it to the other teams.
-
-### P.S. Each branch corresponds to a pattern
+The first thing the Abstract Factory pattern suggests is to explicitly declare interfaces for each distinct product of the product family (e.g., chair, sofa or coffee table). Then you can make all variants of products follow those interfaces.
